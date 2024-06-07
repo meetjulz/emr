@@ -7,12 +7,13 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/css/main.pcss'],
   devtools: { enabled: true },
+  devServer: { port: 1234 },
   eslint: {
     config: {
       standalone: false,
     },
   },
-  modules: ['@nuxt/eslint', '@nuxtjs/color-mode'],
+  modules: ['nuxt-icon', '@nuxt/eslint', '@nuxtjs/color-mode'],
   postcss: {
     plugins: {
       tailwindcss: {},
