@@ -1,6 +1,6 @@
 <template>
   <div>
-    Dashboard page
+    Labs page
   </div>
 </template>
 

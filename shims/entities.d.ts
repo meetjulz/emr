@@ -13,3 +13,11 @@ export interface IUser {
   email: string
   phoneNumber: string
 }
+
+// Menu
+export interface IMenu {
+  icon: string
+  title: string
+  to: string
+  subMenus?: IMenu[]
+}

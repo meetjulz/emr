@@ -1,11 +1,16 @@
 <template>
   <div>
-    <slot />
+    <Drawer>
+      <template #drawerSide>
+        <Menu />
+      </template>
+
+      <slot />
+    </Drawer>
   </div>
 </template>
 
 <script setup lang="ts">
-
 </script>
 
 <style scoped>

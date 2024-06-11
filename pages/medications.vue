@@ -1,6 +1,6 @@
 <template>
   <div>
-    Dashboard page
+    Medications page
   </div>
 </template>
 

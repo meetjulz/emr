@@ -1,6 +1,6 @@
 <template>
   <div>
-    Dashboard page
+    Appointments page
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
-  <div class="p-8 w-dvw h-dvh grid grid-cols-2">
+  <div class="p-8 w-dvw h-dvh grid xl:grid-cols-2">
     <section class="flex items-center justify-center">
-      <div class="min-w-96 grid gap-16">
+      <div class="xl:min-w-96 grid gap-16">
         <div class="grid gap-2">
           <h1>Login</h1>
           <p class="opacity-50">
@@ -32,7 +32,7 @@
                 @input="errorMessage = ''"
               >
               <button type="button" class="btn btn-square btn-sm btn-ghost" @click="showPassword = !showPassword">
-                <icon class="size-5" :name="showPassword ? 'solar:eye-bold-duotone' : 'solar:eye-closed-bold-duotone'" />
+                <SolarIcon :name="showPassword ? 'eye' : 'eye-closed'" />
               </button>
             </label>
           </div>
@@ -40,14 +40,20 @@
           <span v-if="loading" class="loading text-primary loading-ring loading-xs absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 size-16" />
           <span v-if="errorMessage" class="flex items-center justify-between text-error ring-1 ring-error/15 text-sm px-2 py-1.5 rounded bg-gradient-to-bl from-error/15 to-transparent">
             {{ errorMessage }}
-            <icon name="solar:close-square-linear" class="size-5 cursor-pointer opacity-50" @click="errorMessage = ''" />
+            <SolarIcon name="close-square" class="cursor-pointer" @click="errorMessage = ''" />
           </span>
 
-          <button type="submit" class="btn btn-neutral" :class="{ 'pointer-events-none': loading }">
+          <button
+            type="submit"
+            class="btn btn-primary mt-8"
+            :class="[
+              { 'pointer-events-none': loading },
+            ]"
+          >
             Login
           </button>
 
-          <div class="flex items-center gap-2">
+          <div class="flex flex-wrap items-center gap-2">
             <p class="text-sm opacity-50">
               If you dont have an account, Create one
             </p>
@@ -59,7 +65,7 @@
       </div>
     </section>
 
-    <section class="size-full bg-gradient-to-b from-primary/75 to-transparent rounded-[3rem] flex items-center justify-center" />
+    <section class="size-full bg-gradient-to-b from-primary/25 to-transparent hidden rounded-[3rem] xl:flex items-center justify-center" />
   </div>
 </template>
 

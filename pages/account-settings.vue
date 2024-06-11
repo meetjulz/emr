@@ -1,6 +1,6 @@
 <template>
   <div>
-    Dashboard page
+    Account Settings page
   </div>
 </template>
 

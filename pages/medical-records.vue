@@ -1,6 +1,6 @@
 <template>
   <div>
-    Dashboard page
+    Medical Records page
   </div>
 </template>
 

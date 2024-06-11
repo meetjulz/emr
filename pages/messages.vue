@@ -1,6 +1,6 @@
 <template>
   <div>
-    Dashboard page
+    Messages page
   </div>
 </template>
 
