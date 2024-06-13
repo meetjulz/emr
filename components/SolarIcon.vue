@@ -8,10 +8,11 @@
 </template>
 
 <script setup lang="ts">
+  import type { TSize, TSolarIconVariant } from '~/shims'
+
   interface Props {
-    // eslint-disable-next-line perfectionist/sort-union-types
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
-    variant?: 'bold' | 'bold-duotone' | 'broken' | 'line-duotone' | 'linear' | 'outline'
+    size?: TSize
+    variant?: TSolarIconVariant
     name: string
   }
 
@@ -23,7 +24,15 @@
 
   // methods
   function getTextSize(): string {
-    return `text-${props.size}`
+    const textSizes: { [key in TSize]: `text-${TSize}` } = {
+      'xs': 'text-xs',
+      'sm': 'text-sm',
+      'md': 'text-md',
+      'lg': 'text-lg',
+      'xl': 'text-xl',
+      '2xl': 'text-2xl',
+    }
+    return props.size ? textSizes[props.size] : ''
   }
   function getName(): string {
     return `solar:${props.name}-${props.variant}`

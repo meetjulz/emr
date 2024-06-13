@@ -5,7 +5,9 @@
         <Menu />
       </template>
 
-      <slot />
+      <div>
+        <slot />
+      </div>
     </Drawer>
   </div>
 </template>
